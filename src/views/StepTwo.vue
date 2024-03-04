@@ -181,7 +181,7 @@ export default {
             height: fittedImageSize.height,
             opacity: 0.7,
         });
-        lastPage.drawText('Certifie sur l\'honneur avoir été présent(e)sur les créneaux indiqués dans le planning', {
+        lastPage.drawText('Certifie sur l\'honneur avoir été présent(e) sur les créneaux indiqués dans le planning', {
             x: 210,
             y: 30 + 100/2,
             maxWidth: width - 260,
