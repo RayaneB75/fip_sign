@@ -4,22 +4,20 @@ FIP Sign
 _Une aide pour emmarger en FIP + TAF._
 
 ## Commencer à développer
-L'appli se base sur le framework [Vue.js](https://fr.vuejs.org) et [Bun](https://bun.sh) pour le développement et le build.
-
-Il est possible de remlpacer **bun** par **node.js**.
+L'appli se base sur le framework [Vue.js](https://fr.vuejs.org) et [Node](https://nodejs.org/) pour le développement et le build.
 
 ### Tester l'application 
 
 ```bash
-$ bun install
-$ bun run dev
+$ npm install
+$ npm run dev
 ```
 
 ### Déployer et vérifier l'application
 
 ```bash
-$ bun run build
-$ bun run preview
+$ npm run build
+$ npm run preview
 ```
 
 ## Déployer l'application avec Docker
