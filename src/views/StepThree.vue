@@ -1,14 +1,15 @@
 <script setup>
+import { moodleMap } from '@/changingValues.ts'
 
 const weekOfYear = Number(sessionStorage.getItem('weekOfYear')) || 0;
 
-const dropId = (weekOfYear > 36) ? (60783 + weekOfYear) : (60835 + weekOfYear);
+const dropId = moodleMap.get(weekOfYear)
 
 const moodleUrl = `https://moodle.imt-atlantique.fr/mod/assign/view.php?id=${dropId}`
 
 function clickMoodle() {
-        window.open(moodleUrl, "_blank");
-    }
+    window.open(moodleUrl, "_blank");
+}
 
 </script>
 
