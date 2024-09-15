@@ -17,18 +17,18 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Set outputs
+      - name: Set short git commit SHA
         id: vars
-        run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+        run: echo "COMMIT_SHORT_SHA=$(git rev-parse --short ${{ github.sha }})" >> $GITHUB_ENV
       - name: Build and push
         if: github.GITHUB_REF_NAME != 'main'
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{ github.repository }}:${{ steps.vars.outputs.sha_short}},${{ github.repository }}:dev
+          tags: ${{ env.COMMIT_SHORT_SHA }}:${{ steps.vars.outputs.sha_short}},${{ env.COMMIT_SHORT_SHA }}:dev
       - name: Build and push
         if: github.GITHUB_REF_NAME == 'main'
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{ github.repository }}:${{ steps.vars.outputs.sha_short}},${{ github.repository }}:latest
+          tags: ${{ env.COMMIT_SHORT_SHA }}:${{ steps.vars.outputs.sha_short}},${{ env.COMMIT_SHORT_SHA }}:latest
