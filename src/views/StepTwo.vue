@@ -306,7 +306,7 @@ export default {
           <li>
             <label for="weekOfYear" title="Le numéro de la semaine est automatiquement renseigné.">Numéro de semaine :
             </label>
-            <select id="weekOfYear" model="weekOfYear" require>
+            <select id="weekOfYear" v-model="weekOfYear" require>
               <!-- Display every week from variables, and highlight current week -->
               <option v-for="week in weekSet" :value="week" :key="week" >{{ week }} {{ week === currentWeek ? '(semaine actuelle)' : '' }}</option>
             </select>
