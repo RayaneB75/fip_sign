@@ -28,7 +28,7 @@ function clickPass() {
                     Il est reccomandé de l'utiliser sur un navigateur d'ordinateur, pour pouvoir télécharger le
                     calendrier en couleurs depuis PASS.<br />
                 </p>
-                <p>Le bouton de la première étape redirige sur pass pour permettre de télécherger le calendrier
+                <p>Le bouton de la première étape redirige sur PASS pour permettre de télécharger le calendrier
                     personnel.
                     La seconde étape incorpore la signature et le statut dans le calendrier et formate le nom du
                     fichier.
